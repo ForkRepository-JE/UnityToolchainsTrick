@@ -9,6 +9,6 @@ namespace UnityToolchinsTrick
 {
     public static class PlayerSettingBind
     {
-        public static char[] PlayerSettingDefineSplits => PlayerSettings.defineSplits;
+        public static char[] PlayerSettingDefineSplits => new char[] { ';', ',' }; // Replace with actual logic or valid property
     }
 }

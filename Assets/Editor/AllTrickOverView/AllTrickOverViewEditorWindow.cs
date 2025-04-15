@@ -38,12 +38,12 @@ namespace AllTrickOverView
             }
         }
 
-        protected override void OnGUI()
+        protected override void OnImGUI()
         {
             GUILayout.BeginHorizontal();
 
             GUI.color = Color.HSVToRGB(
-                Mathf.Cos((float) UnityEditor.EditorApplication.timeSinceStartup + 1f) * 0.125f + 0.325f, 1, 1);
+                Mathf.Cos((float)UnityEditor.EditorApplication.timeSinceStartup + 1f) * 0.125f + 0.325f, 1, 1);
             if (GUILayout.Button(
                 new GUIContent("Create a Example OverView", EditorGUIUtility.FindTexture("Toolbar Plus")),
                 "toolbarbutton", GUILayout.Width(200)))
@@ -53,7 +53,7 @@ namespace AllTrickOverView
 
             GUI.color = Color.white;
             GUILayout.EndHorizontal();
-            base.OnGUI();
+            base.OnImGUI();
         }
 
         protected override OdinMenuTree BuildMenuTree()
